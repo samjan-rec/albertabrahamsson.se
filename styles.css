@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+nav{
+    display: flex;
+    line-height: 10%;
+    height: 18px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    width: 100%;
+    line-height: 10%;
+}
+.container {
+    background-color: rgb(252,252,252);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    vertical-align: middle;
+    box-shadow:0 1px 4px rgba(45, 128, 122, 0.3), 0 0 40px rgba(45, 128, 122, 0.1) inset;
+}
+.main-container{
+    display: grid;
+    font-size: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: -1;
+}
+.cv-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-right: 5%;
+}
+.title{
+    font-size: 400px;
+    margin: auto;
+}
+.years{
+    text-align: right;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 5px;
+}
+.description{
+    justify-content: left;
+    font-size: 12px;
+    margin: 5px;    
+}
+.description-end{
+    justify-content: left;
+    font-size: 12px;
+    margin: 5px;
+    padding-bottom: 65px;    
+}
+.subtitle{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.headshot{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    padding: 36px;
+    padding-top: 136px;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+    margin: 0px; 
+    background-color:#cce3dd ;
+}
+
+.icon-wrapper {
+    background-color: rgb(252,252,252);
+    float: left;
+    position: absolute;
+    align-content: center;
+    top: 38px;
+    left: 40px; 
+}
+.icon-wrapper-half {
+    background-color: rgb(252,252,252);
+    display: none;
+}
+.icon-wrapper-center {
+    background-color: rgb(252,252,252);
+    display: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    padding: 18px;
+    }    
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0px; 
+    width: 100%;
+    padding: 6px;
+    background-color: rgb(252, 252, 252);
+    box-shadow:0 -1px 4px rgba(45, 128, 122, 0.3), 0 0 40px rgba(45, 128, 122, 0.1) inset;
+}
+.nav-wrapper {
+    background-color: rgb(252,252,252);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 34px;
+    padding: 6px;
+    color:black;
+    font-size: 28px;
+    font-style: italic;  
+}
+
+.nav-wrapper a {
+color: black;
+text-decoration: none;
+}
+
+.nav-wrapper a:hover {
+color: #E3CCD2;
+text-decoration: none;
+transition: color 0.3s;
+cursor: pointer;
+}
+.name-wrapper{
+    display: none;
+}
+
+
+@media all and (max-width: 800px){
+    .nav-wrapper{
+     font-size: 26px;
+     flex-wrap: nowrap;
+    }
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .headshot{
+        width: 90%;
+        height: auto;
+    }
+    .icon-wrapper{
+        float: left;
+        position: absolute;
+        top: 38px;
+        left: 40px; 
+    }
+    .icon-wrapper-half {
+        display: none;
+
+    }
+    .banner-wrapper{
+        display: none;
+    }
+    .title{
+        font-size: 60px;
+        margin: auto;
+    
+    }
+}
+@media all and (max-width: 620px){
+    body{overflow-x: hidden;}
+    .nav-wrapper{
+        font-size: 24px;
+        padding: 16px;
+
+       }
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .headshot{
+        width: 90%;
+        height: auto;
+    }
+
+}
+@media all and (max-width: 540px){
+        body{overflow-x: hidden;}
+        .nav-wrapper{
+            display:none;    
+        }
+        .main-container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .headshot{
+            display: flex;
+            -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }        
+        .icon-wrapper-half {
+            display: none;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            justify-content: center;
+            padding: 18px;
+        }
+        .icon-wrapper-center {
+            display: flex;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            justify-content: center;
+            padding: 18px;
+        }
+        .title{
+            font-size: 26px;
+            margin: auto;
+        
+        }
+
+}        
